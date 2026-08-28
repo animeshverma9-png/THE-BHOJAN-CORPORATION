@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+  <title>Catering Packages & Menu | The Bhojan Corporation Delhi NCR</title>
+  <meta name="description" content="Explore pure vegetarian catering menus: Crispy Starters, Tandoori Grills, Celebration Thalis, Basic Utility Packages, Royal Feasts & Jain Satvik meals." />
+  <link rel="canonical" href="https://thebhojancorporation.com/packages.html" />
+  
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700;800;900&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css" />
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          screens: { 'xs': '380px' },
+          fontFamily: { serif: ['Cinzel', 'serif'], sans: ['"Plus Jakarta Sans"', 'sans-serif'] },
+          colors: {
+            gold: { 50: '#fbf8f0', 100: '#f5edd9', 200: '#eddcb5', 300: '#dfc38a', 400: '#d0aa62', 500: '#c19545', 600: '#a77a33', 700: '#875d27', 800: '#6d4923', 900: '#53371d' },
+            charcoal: { 800: '#232220', 900: '#181715', 950: '#0f0e0c' }
+          }
+        }
+      }
+    }
+  </script>
+</head>
+<body class="bg-[#f8f7f4] text-charcoal-900 min-h-screen flex flex-col font-sans antialiased selection:bg-gold-200">
+  
+  <header class="bg-white/95 backdrop-blur-md shadow-xs sticky top-0 z-40 border-b border-gold-200/60">
+    <div class="max-w-7xl mx-auto px-2 sm:px-6 lg:px-8">
+      <div class="flex items-center justify-between h-16 sm:h-20 gap-1.5 sm:gap-4">
+        <a href="index.html" class="flex items-center gap-1.5 xs:gap-2.5 sm:gap-3.5 group select-none min-w-0">
+          <img src="Logo TBC.png" alt="Logo" class="w-8 h-8 sm:w-12 sm:h-12 object-contain" />
+          <div class="flex flex-col justify-center">
+            <span class="text-[11px] xs:text-xs sm:text-lg lg:text-xl font-extrabold font-serif uppercase tracking-wider text-charcoal-950">The Bhojan Corporation</span>
+            <span class="text-[6.5px] xs:text-[7.5px] sm:text-[9px] font-bold text-gold-700 tracking-wider uppercase font-sans">Premium Packed and Bulk Foods</span>
+          </div>
+        </a>
+        <nav class="hidden md:flex items-center gap-1.5 bg-stone-50/80 p-1.5 rounded-full border border-gold-200/60 shadow-inner">
+          <a href="index.html" class="nav-btn nav-btn-inactive">Home</a>
+          <a href="packages.html" class="nav-btn nav-btn-active">Packages</a>
+          <a href="gallery.html" class="nav-btn nav-btn-inactive">Gallery</a>
+          <a href="faq.html" class="nav-btn nav-btn-inactive">FAQ</a>
+          <a href="about.html" class="nav-btn nav-btn-inactive">About</a>
+          <a href="contact.html" class="nav-btn nav-btn-inactive">Contact Us</a>
+        </nav>
+        <button onclick="toggleMobileMenu()" aria-label="Toggle Menu" class="md:hidden p-1.5 rounded-lg border border-gold-200/50">
+          <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
+        </button>
+      </div>
+    </div>
+    <div id="mobileMenu" class="hidden md:hidden border-t border-gold-100 bg-white px-4 py-3 space-y-1 text-xs uppercase font-semibold">
+      <a href="index.html" class="mobile-nav-btn text-stone-700">Home</a>
+      <a href="packages.html" class="mobile-nav-btn mobile-nav-btn-active">Packages & Menu</a>
+      <a href="gallery.html" class="mobile-nav-btn text-stone-700">Gallery</a>
+      <a href="faq.html" class="mobile-nav-btn text-stone-700">FAQ</a>
+      <a href="about.html" class="mobile-nav-btn text-stone-700">About</a>
+      <a href="contact.html" class="mobile-nav-btn text-stone-700">Contact Us</a>
+    </div>
+  </header>
+
+  <main class="animate-page-fade flex-1 max-w-7xl w-full mx-auto px-3.5 sm:px-6 lg:px-8 py-5 sm:py-8 space-y-8 sm:space-y-10">
+    <div class="border-b border-gold-200 pb-3">
+      <span class="text-[10px] font-bold text-gold-700 uppercase tracking-[0.2em]">Authentic Menus</span>
+      <h1 class="text-2xl sm:text-3xl font-bold font-serif text-charcoal-950 uppercase tracking-wide mt-0.5">Catering Packages & Menu</h1>
+      <p class="text-xs text-stone-500 mt-0.5">Select up to 1 Starters package & 1 Main Course package. Customize varieties and submit for quotation.</p>
+    </div>
+
+    <!-- 1. Starters Section -->
+    <div class="space-y-4">
+      <div class="flex items-center justify-between border-b border-gold-200/70 pb-2">
+        <h2 class="text-lg sm:text-xl font-bold font-serif text-charcoal-950 uppercase tracking-wider">Starters Packages</h2>
+        <span class="text-[10px] font-bold text-gold-700 uppercase tracking-widest bg-gold-50 border border-gold-200 px-2.5 py-0.5 rounded-full">Rule: Max 1 Package</span>
+      </div>
+      
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 sm:gap-6">
+        <div id="pkg-card-101" class="rounded-2xl sm:rounded-3xl border border-gold-300/80 bg-gradient-to-b from-[#fbf8f0] to-[#f5ebd6] p-4 sm:p-6 flex flex-col justify-between">
+          <div>
+            <div class="border-b border-gold-300/60 pb-3 mb-3">
+              <div class="flex justify-between items-center mb-1">
+                <span class="bg-white text-gold-800 font-extrabold text-[9px] sm:text-[10px] px-2 py-0.5 rounded-full border border-gold-300 uppercase">Crispy Starters</span>
+                <span id="pkg-status-101" class="hidden text-[9px] font-bold text-emerald-800 bg-emerald-100 px-2 py-0.5 rounded-full">In Quotation</span>
+              </div>
+              <h3 class="font-bold font-serif text-charcoal-950 text-base sm:text-xl">Crispy Classics</h3>
+              <p class="text-xs text-stone-600 mt-1">Golden-fried savoury appetizers prepared fresh with royal dips and sides.</p>
+            </div>
+            <div class="text-xs py-1 px-2 rounded-lg bg-white/80 border border-gold-200/80 mb-3 flex justify-between">
+              <span class="font-bold text-charcoal-900">• Crispy Selection</span>
+              <span class="text-gold-900 font-extrabold text-[9px] bg-gold-100 px-1.5 py-0.5 rounded">Choose Any 3</span>
+            </div>
+            <button type="button" onclick="openCustomizeModal(101)" class="w-full mb-3 py-2 px-3 rounded-xl bg-white hover:bg-gold-50 text-gold-900 font-extrabold text-xs border border-gold-300">Customize Menu Dishes</button>
+            <div class="bg-white/85 border border-gold-300/80 rounded-xl p-2.5 mb-3 text-[10px] text-stone-700">
+              <strong>Sides Included:</strong> Mint Chutney, Spicy Dip, Toothpicks & Napkins
+            </div>
+          </div>
+          <button id="pkg-btn-101" onclick="togglePackageSelection(101)" class="btn-luxury-primary w-full py-3 rounded-xl font-extrabold text-xs uppercase tracking-wider">+ Add to Quotation</button>
+        </div>
+
+        <div id="pkg-card-102" class="rounded-2xl sm:rounded-3xl border border-gold-300/80 bg-gradient-to-b from-[#fbf8f0] to-[#f5ebd6] p-4 sm:p-6 flex flex-col justify-between">
+          <div>
+            <div class="border-b border-gold-300/60 pb-3 mb-3">
+              <div class="flex justify-between items-center mb-1">
+                <span class="bg-white text-gold-800 font-extrabold text-[9px] sm:text-[10px] px-2 py-0.5 rounded-full border border-gold-300 uppercase">Clay Oven Grills</span>
+                <span id="pkg-status-102" class="hidden text-[9px] font-bold text-emerald-800 bg-emerald-100 px-2 py-0.5 rounded-full">In Quotation</span>
+              </div>
+              <h3 class="font-bold font-serif text-charcoal-950 text-base sm:text-xl">Tandoori Temptations</h3>
+              <p class="text-xs text-stone-600 mt-1">Smoky tandoori grills, marinated cottage cheese skewers, and roasted delicacies.</p>
+            </div>
+            <div class="text-xs py-1 px-2 rounded-lg bg-white/80 border border-gold-200/80 mb-3 flex justify-between">
+              <span class="font-bold text-charcoal-900">• Tandoori Selection</span>
+              <span class="text-gold-900 font-extrabold text-[9px] bg-gold-100 px-1.5 py-0.5 rounded">Choose Any 3</span>
+            </div>
+            <button type="button" onclick="openCustomizeModal(102)" class="w-full mb-3 py-2 px-3 rounded-xl bg-white hover:bg-gold-50 text-gold-900 font-extrabold text-xs border border-gold-300">Customize Menu Dishes</button>
+            <div class="bg-white/85 border border-gold-300/80 rounded-xl p-2.5 mb-3 text-[10px] text-stone-700">
+              <strong>Sides Included:</strong> Mint Chutney, Chaat Masala, Lemon & Napkins
+            </div>
+          </div>
+          <button id="pkg-btn-102" onclick="togglePackageSelection(102)" class="btn-luxury-primary w-full py-3 rounded-xl font-extrabold text-xs uppercase tracking-wider">+ Add to Quotation</button>
+        </div>
+
+        <div id="pkg-card-103" class="rounded-2xl sm:rounded-3xl border border-gold-300/80 bg-gradient-to-b from-[#fbf8f0] to-[#f5ebd6] p-4 sm:p-6 flex flex-col justify-between">
+          <div>
+            <div class="border-b border-gold-300/60 pb-3 mb-3">
+              <div class="flex justify-between items-center mb-1">
+                <span class="bg-white text-gold-800 font-extrabold text-[9px] sm:text-[10px] px-2 py-0.5 rounded-full border border-gold-300 uppercase">Asian & Street Special</span>
+                <span id="pkg-status-103" class="hidden text-[9px] font-bold text-emerald-800 bg-emerald-100 px-2 py-0.5 rounded-full">In Quotation</span>
+              </div>
+              <h3 class="font-bold font-serif text-charcoal-950 text-base sm:text-xl">Wok Collection</h3>
+              <p class="text-xs text-stone-600 mt-1">Wok-tossed noodles, fried rice, saucy bites, and steaming momos.</p>
+            </div>
+            <div class="text-xs py-1 px-2 rounded-lg bg-white/80 border border-gold-200/80 mb-3 flex justify-between">
+              <span class="font-bold text-charcoal-900">• Wok Selection</span>
+              <span class="text-gold-900 font-extrabold text-[9px] bg-gold-100 px-1.5 py-0.5 rounded">Choose Any 3</span>
+            </div>
+            <button type="button" onclick="openCustomizeModal(103)" class="w-full mb-3 py-2 px-3 rounded-xl bg-white hover:bg-gold-50 text-gold-900 font-extrabold text-xs border border-gold-300">Customize Menu Dishes</button>
+            <div class="bg-white/85 border border-gold-300/80 rounded-xl p-2.5 mb-3 text-[10px] text-stone-700">
+              <strong>Sides Included:</strong> Red Spicy Chutney, Signature Dip & Cutlery
+            </div>
+          </div>
+          <button id="pkg-btn-103" onclick="togglePackageSelection(103)" class="btn-luxury-primary w-full py-3 rounded-xl font-extrabold text-xs uppercase tracking-wider">+ Add to Quotation</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- 2. Main Course Section -->
+    <div class="space-y-4 pt-4">
+      <div class="flex items-center justify-between border-b border-gold-200/70 pb-2">
+        <h2 class="text-lg sm:text-xl font-bold font-serif text-charcoal-950 uppercase tracking-wider">Main Course Packages</h2>
+        <span class="text-[10px] font-bold text-gold-700 uppercase tracking-widest bg-gold-50 border border-gold-200 px-2.5 py-0.5 rounded-full">Rule: Max 1 Package</span>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 sm:gap-6">
+        <div id="pkg-card-1" class="rounded-2xl sm:rounded-3xl border border-gold-300/80 bg-gradient-to-b from-[#fbf8f0] to-[#f5ebd6] p-4 sm:p-6 flex flex-col justify-between">
+          <div>
+            <div class="border-b border-gold-300/60 pb-3 mb-3">
+              <div class="flex justify-between items-center mb-1">
+                <span class="bg-white text-gold-800 font-extrabold text-[9px] sm:text-[10px] px-2 py-0.5 rounded-full border border-gold-300 uppercase">Essential Feast</span>
+                <span id="pkg-status-1" class="hidden text-[9px] font-bold text-emerald-800 bg-emerald-100 px-2 py-0.5 rounded-full">In Quotation</span>
+              </div>
+              <h3 class="font-bold font-serif text-charcoal-950 text-base sm:text-xl">Classic Package</h3>
+              <p class="text-xs text-stone-600 mt-1">Classic comfort thali and buffet menu for daily events and private gatherings.</p>
+            </div>
+            <p class="text-[11px] text-stone-600 mb-3 leading-snug">Includes Dal, Paneer, Tarkari, Breads, Rice, Raita & Gulab Jamun.</p>
+            <button type="button" onclick="openCustomizeModal(1)" class="w-full mb-3 py-2 px-3 rounded-xl bg-white hover:bg-gold-50 text-gold-900 font-extrabold text-xs border border-gold-300">Customize Menu Dishes</button>
+            <div class="bg-white/85 border border-gold-300/80 rounded-xl p-2.5 mb-3 text-[10px] text-stone-700"><strong>Sides Included:</strong> Onion, Mint Chutney, Achaar</div>
+          </div>
+          <button id="pkg-btn-1" onclick="togglePackageSelection(1)" class="btn-luxury-primary w-full py-3 rounded-xl font-extrabold text-xs uppercase tracking-wider">+ Add to Quotation</button>
+        </div>
+
+        <div id="pkg-card-2" class="rounded-2xl sm:rounded-3xl border border-gold-300/80 bg-gradient-to-b from-[#fbf8f0] to-[#f5ebd6] p-4 sm:p-6 flex flex-col justify-between">
+          <div>
+            <div class="border-b border-gold-300/60 pb-3 mb-3">
+              <div class="flex justify-between items-center mb-1">
+                <span class="bg-white text-gold-800 font-extrabold text-[9px] sm:text-[10px] px-2 py-0.5 rounded-full border border-gold-300 uppercase">Most Popular</span>
+                <span id="pkg-status-2" class="hidden text-[9px] font-bold text-emerald-800 bg-emerald-100 px-2 py-0.5 rounded-full">In Quotation</span>
+              </div>
+              <h3 class="font-bold font-serif text-charcoal-950 text-base sm:text-xl">Celebration Package</h3>
+              <p class="text-xs text-stone-600 mt-1">Expanded premium spread featuring Naan, Pulao, and extended sweets.</p>
+            </div>
+            <p class="text-[11px] text-stone-600 mb-3 leading-snug">Choice of Dal, Premium Paneer, Tarkari, 2 Breads, Rice, Raita & Sweets.</p>
+            <button type="button" onclick="openCustomizeModal(2)" class="w-full mb-3 py-2 px-3 rounded-xl bg-white hover:bg-gold-50 text-gold-900 font-extrabold text-xs border border-gold-300">Customize Menu Dishes</button>
+            <div class="bg-white/85 border border-gold-300/80 rounded-xl p-2.5 mb-3 text-[10px] text-stone-700"><strong>Sides Included:</strong> Salad, Onion, Mint Chutney, Achaar, Papad</div>
+          </div>
+          <button id="pkg-btn-2" onclick="togglePackageSelection(2)" class="btn-luxury-primary w-full py-3 rounded-xl font-extrabold text-xs uppercase tracking-wider">+ Add to Quotation</button>
+        </div>
+
+        <div id="pkg-card-3" class="rounded-2xl sm:rounded-3xl border border-gold-300/80 bg-gradient-to-b from-[#fbf8f0] to-[#f5ebd6] p-4 sm:p-6 flex flex-col justify-between">
+          <div>
+            <div class="border-b border-gold-300/60 pb-3 mb-3">
+              <div class="flex justify-between items-center mb-1">
+                <span class="bg-white text-gold-800 font-extrabold text-[9px] sm:text-[10px] px-2 py-0.5 rounded-full border border-gold-300 uppercase">Chef's Grand Feast</span>
+                <span id="pkg-status-3" class="hidden text-[9px] font-bold text-emerald-800 bg-emerald-100 px-2 py-0.5 rounded-full">In Quotation</span>
+              </div>
+              <h3 class="font-bold font-serif text-charcoal-950 text-base sm:text-xl">Royal Package</h3>
+              <p class="text-xs text-stone-600 mt-1">Grand royal spread featuring Exotic Curries, Biryani & Double Sweets.</p>
+            </div>
+            <p class="text-[11px] text-stone-600 mb-3 leading-snug">Dal, Paneer, Exotic Curry, 3 Breads, 2 Rices, 2 Raitas & 2 Royal Sweets.</p>
+            <button type="button" onclick="openCustomizeModal(3)" class="w-full mb-3 py-2 px-3 rounded-xl bg-white hover:bg-gold-50 text-gold-900 font-extrabold text-xs border border-gold-300">Customize Menu Dishes</button>
+            <div class="bg-white/85 border border-gold-300/80 rounded-xl p-2.5 mb-3 text-[10px] text-stone-700"><strong>Sides Included:</strong> Garden Salad, Chutney, Papad, Sirka Onion & Mouth Freshner</div>
+          </div>
+          <button id="pkg-btn-3" onclick="togglePackageSelection(3)" class="btn-luxury-primary w-full py-3 rounded-xl font-extrabold text-xs uppercase tracking-wider">+ Add to Quotation</button>
+        </div>
+
+        <div id="pkg-card-4" class="rounded-2xl sm:rounded-3xl border border-gold-300/80 bg-gradient-to-b from-[#fbf8f0] to-[#f5ebd6] p-4 sm:p-6 flex flex-col justify-between">
+          <div>
+            <div class="border-b border-gold-300/60 pb-3 mb-3">
+              <div class="flex justify-between items-center mb-1">
+                <span class="bg-white text-gold-800 font-extrabold text-[9px] sm:text-[10px] px-2 py-0.5 rounded-full border border-gold-300 uppercase">Daily Essential</span>
+                <span id="pkg-status-4" class="hidden text-[9px] font-bold text-emerald-800 bg-emerald-100 px-2 py-0.5 rounded-full">In Quotation</span>
+              </div>
+              <h3 class="font-bold font-serif text-charcoal-950 text-base sm:text-xl">Basic Utility Package</h3>
+              <p class="text-xs text-stone-600 mt-1">Everyday comfort catering package tailored for group meals, office sessions, and gatherings.</p>
+            </div>
+            <p class="text-[11px] text-stone-600 mb-3 leading-snug">Includes Dal Tadka/Fry, Dry Sabzi, Tawa Roti, Steam Rice & Boondi Raita.</p>
+            <button type="button" onclick="openCustomizeModal(4)" class="w-full mb-3 py-2 px-3 rounded-xl bg-white hover:bg-gold-50 text-gold-900 font-extrabold text-xs border border-gold-300">Customize Menu Dishes</button>
+            <div class="bg-white/85 border border-gold-300/80 rounded-xl p-2.5 mb-3 text-[10px] text-stone-700"><strong>Sides Included:</strong> Salad, Onion, Achaar</div>
+          </div>
+          <button id="pkg-btn-4" onclick="togglePackageSelection(4)" class="btn-luxury-primary w-full py-3 rounded-xl font-extrabold text-xs uppercase tracking-wider">+ Add to Quotation</button>
+        </div>
+
+        <div id="pkg-card-5" class="rounded-2xl sm:rounded-3xl border border-gold-300/80 bg-gradient-to-b from-[#fbf8f0] to-[#f5ebd6] p-4 sm:p-6 flex flex-col justify-between">
+          <div>
+            <div class="border-b border-gold-300/60 pb-3 mb-3">
+              <div class="flex justify-between items-center mb-1">
+                <span class="bg-white text-gold-800 font-extrabold text-[9px] sm:text-[10px] px-2 py-0.5 rounded-full border border-gold-300 uppercase">Satvik (No Onion/Garlic)</span>
+                <span id="pkg-status-5" class="hidden text-[9px] font-bold text-emerald-800 bg-emerald-100 px-2 py-0.5 rounded-full">In Quotation</span>
+              </div>
+              <h3 class="font-bold font-serif text-charcoal-950 text-base sm:text-xl">Jain Special Package</h3>
+              <p class="text-xs text-stone-600 mt-1">Deluxe satvik feast prepared strictly with pure ingredients and no root vegetables.</p>
+            </div>
+            <p class="text-[11px] text-stone-600 mb-3 leading-snug">2 Dals, Satvik Paneer, Dry Sabzi, 2 Breads, Rice, Raita & Halwa/Gulab Jamun.</p>
+            <button type="button" onclick="openCustomizeModal(5)" class="w-full mb-3 py-2 px-3 rounded-xl bg-white hover:bg-gold-50 text-gold-900 font-extrabold text-xs border border-gold-300">Customize Menu Dishes</button>
+            <div class="bg-white/85 border border-gold-300/80 rounded-xl p-2.5 mb-3 text-[10px] text-stone-700"><strong>Sides Included:</strong> Jain Salad, Mint Chutney, Achaar & Mouth Freshner</div>
+          </div>
+          <button id="pkg-btn-5" onclick="togglePackageSelection(5)" class="btn-luxury-primary w-full py-3 rounded-xl font-extrabold text-xs uppercase tracking-wider">+ Add to Quotation</button>
+        </div>
+
+        <div id="pkg-card-6" class="rounded-2xl sm:rounded-3xl border border-gold-300/80 bg-gradient-to-b from-[#fbf8f0] to-[#f5ebd6] p-4 sm:p-6 flex flex-col justify-between">
+          <div>
+            <div class="border-b border-gold-300/60 pb-3 mb-3">
+              <div class="flex justify-between items-center mb-1">
+                <span class="bg-white text-gold-800 font-extrabold text-[9px] sm:text-[10px] px-2 py-0.5 rounded-full border border-gold-300 uppercase">Chef's Signature Thali</span>
+                <span id="pkg-status-6" class="hidden text-[9px] font-bold text-emerald-800 bg-emerald-100 px-2 py-0.5 rounded-full">In Quotation</span>
+              </div>
+              <h3 class="font-bold font-serif text-charcoal-950 text-base sm:text-xl">The Bhojan Co. Thali (The Deal Breaker)</h3>
+              <p class="text-xs text-stone-600 mt-1">High-value signature packed meal box with authentic gravies, rich paneer, and tandoori breads.</p>
+            </div>
+            <p class="text-[11px] text-stone-600 mb-3 leading-snug">Dal, Paneer/Sabzi, Choice of Tawa/Tandoori Roti/Naan, Rice & Raita.</p>
+            <button type="button" onclick="openCustomizeModal(6)" class="w-full mb-3 py-2 px-3 rounded-xl bg-white hover:bg-gold-50 text-gold-900 font-extrabold text-xs border border-gold-300">Customize Menu Dishes</button>
+            <div class="bg-white/85 border border-gold-300/80 rounded-xl p-2.5 mb-3 text-[10px] text-stone-700"><strong>Sides Included:</strong> Salad, Onion, Achaar</div>
+          </div>
+          <button id="pkg-btn-6" onclick="togglePackageSelection(6)" class="btn-luxury-primary w-full py-3 rounded-xl font-extrabold text-xs uppercase tracking-wider">+ Add to Quotation</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Quotation Form Desk -->
+    <div id="checkoutDeskSection" class="bg-white rounded-2xl sm:rounded-3xl border border-gold-300/80 p-4 sm:p-8 lg:p-10 shadow-xl scroll-mt-24">
+      <div class="border-b border-gold-200/80 pb-4 mb-6 flex flex-col sm:flex-row justify-between sm:items-center gap-2">
+        <h3 class="text-lg sm:text-2xl font-bold font-serif uppercase text-charcoal-950">Review Selection & Submit Quote</h3>
+        <span class="text-xs text-stone-500">Selected: <strong id="selectedPkgLabel" class="text-gold-800">None Selected</strong></span>
+      </div>
+
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-6 sm:gap-8">
+        <div class="lg:col-span-5 bg-[#faf9f6] p-4 sm:p-6 rounded-2xl border border-gold-200">
+          <h4 class="text-xs font-extrabold uppercase tracking-wider text-charcoal-950 mb-3">Chosen Menu Summary</h4>
+          <div id="quotationItemsList" class="space-y-3 max-h-80 overflow-y-auto"></div>
+        </div>
+
+        <form id="orderForm" onsubmit="sendToWhatsApp(event)" class="lg:col-span-7 space-y-4">
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+            <div>
+              <label class="block text-xs font-bold mb-1">Full Name *</label>
+              <input type="text" id="custName" required placeholder="e.g. Rahul Sharma" class="w-full px-3 py-2.5 border border-gold-200 rounded-xl text-xs" />
+            </div>
+            <div>
+              <label class="block text-xs font-bold mb-1">Contact Phone *</label>
+              <input type="tel" id="custPhone" required placeholder="e.g. +91 98765 43210" class="w-full px-3 py-2.5 border border-gold-200 rounded-xl text-xs" />
+            </div>
+          </div>
+          <div class="grid grid-cols-1 sm:grid-cols-3 gap-3">
+            <div>
+              <label class="block text-xs font-bold mb-1">Guests (Min. 20)</label>
+              <input type="number" id="custGuests" required min="20" step="5" value="20" onchange="handleFormGuestChange(this.value)" class="w-full px-3 py-2.5 border border-gold-200 rounded-xl text-xs font-bold text-gold-800" />
+            </div>
+            <div>
+              <label class="block text-xs font-bold mb-1">Delivery Date *</label>
+              <input type="date" id="custDate" required class="w-full px-3 py-2.5 border border-gold-200 rounded-xl text-xs" />
+            </div>
+            <div>
+              <label class="block text-xs font-bold mb-1">Delivery Time *</label>
+              <input type="time" id="custTime" required class="w-full px-3 py-2.5 border border-gold-200 rounded-xl text-xs" />
+            </div>
+          </div>
+          <div>
+            <div class="flex justify-between items-center mb-1">
+              <label class="block text-xs font-bold">Venue Address *</label>
+              <button type="button" onclick="openLocationModal()" class="text-xs text-gold-800 font-bold underline">📍 Pick on Map / GPS</button>
+            </div>
+            <input type="text" id="custAddress" required placeholder="Society, Flat/Villa, or Banquet venue" class="w-full px-3 py-2.5 border border-gold-200 rounded-xl text-xs" />
+            <div id="mapCoordinatesBadge" class="hidden mt-2 p-2 bg-emerald-50 text-emerald-800 text-xs rounded-xl flex justify-between">
+              <span>📍 Pin: <strong id="coordsDisplay"></strong></span>
+              <button type="button" onclick="clearMapLocation()" class="text-red-600 underline font-bold">Remove</button>
+            </div>
+          </div>
+          <div>
+            <label class="block text-xs font-bold mb-1">Dietary Notes</label>
+            <textarea id="custNotes" rows="2" placeholder="e.g. Jain food (no onion/garlic), mild spicy..." class="w-full px-3 py-2 border border-gold-200 rounded-xl text-xs"></textarea>
+          </div>
+          <button type="submit" class="btn-luxury-primary animate-pulse-glow w-full py-4 rounded-xl text-charcoal-950 font-extrabold uppercase text-xs">
+            Submit Quotation Request via WhatsApp
+          </button>
+        </form>
+      </div>
+    </div>
+  </main>
+
+  <!-- Location Map Modal -->
+  <div id="locationModal" class="fixed inset-0 bg-charcoal-950/75 z-50 hidden flex items-center justify-center p-3">
+    <div class="animate-modal bg-white rounded-3xl max-w-2xl w-full p-4 sm:p-5 space-y-3">
+      <div class="flex justify-between items-center border-b pb-2">
+        <h3 class="text-sm font-bold font-serif">Select Delivery Pin</h3>
+        <button onclick="closeLocationModal()" class="text-stone-500 font-bold">✕</button>
+      </div>
+      <div class="relative">
+        <input type="text" id="mapSearchInput" placeholder="Search society or landmark..." oninput="handleLocationSearch(this.value)" class="w-full px-3 py-2 border border-gold-300 rounded-xl text-xs" />
+        <button type="button" id="clearSearchBtn" onclick="clearLocationSearch()" class="hidden absolute right-3 top-2 text-xs">✕</button>
+        <div id="searchResultsList" class="hidden absolute top-full left-0 right-0 bg-white border border-gold-200 shadow-xl z-50 max-h-40 overflow-y-auto"></div>
+      </div>
+      <button onclick="locateUserGPS()" class="w-full py-2 bg-gold-500 text-charcoal-950 text-xs font-bold rounded-xl">Use My Current Location (GPS)</button>
+      <div id="mapContainer" class="w-full h-56 rounded-xl border border-gold-200"></div>
+      <div class="p-2 bg-stone-50 rounded-xl text-xs">
+        <p id="modalCoordsText" class="font-mono text-stone-500">No pin selected</p>
+        <p id="modalAddressText" class="font-semibold text-charcoal-950">Tap map to place pin.</p>
+      </div>
+      <div class="flex justify-end gap-2">
+        <button onclick="closeLocationModal()" class="px-4 py-2 border rounded-xl text-xs font-bold">Cancel</button>
+        <button onclick="confirmLocationSelection()" class="btn-luxury-primary px-5 py-2 rounded-xl text-xs font-bold text-charcoal-950">Confirm</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Dish Customization Modal -->
+  <div id="customizeModal" class="fixed inset-0 bg-charcoal-950/70 z-50 hidden flex items-center justify-center p-3">
+    <div class="animate-modal bg-white rounded-3xl max-w-2xl w-full max-h-[90vh] flex flex-col overflow-hidden">
+      <div class="p-4 border-b flex justify-between items-center bg-gold-50/50">
+        <h3 id="modalPkgTitle" class="text-base font-bold font-serif text-charcoal-950">Customize Package</h3>
+        <button onclick="closeCustomizeModal()" class="text-stone-500 font-bold">✕</button>
+      </div>
+      <div id="modalCategoriesContainer" class="p-4 overflow-y-auto space-y-4 flex-1"></div>
+      <div class="p-4 border-t flex justify-end">
+        <button onclick="closeCustomizeModal()" class="btn-luxury-primary text-charcoal-950 font-bold text-xs px-6 py-2.5 rounded-xl">Save Choices</button>
+      </div>
+    </div>
+  </div>
+
+  <footer class="bg-charcoal-950 text-stone-400 border-t border-gold-500/20 mt-auto py-6 sm:py-8 text-center text-xs space-y-2">
+    <p class="font-serif font-bold text-gold-300 tracking-[0.2em] uppercase">The Bhojan Corporation</p>
+    <p class="text-[10px] text-stone-500">&copy; 2026 The Bhojan Corporation. Pure Vegetarian Catering & Event Solutions. All rights reserved.</p>
+  </footer>
+
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+  <script src="js/shared.js"></script>
+  <script src="js/packages.js"></script>
+</body>
+</html>

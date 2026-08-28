@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+  <title>Frequently Asked Questions | The Bhojan Corporation</title>
+  <meta name="description" content="Find answers regarding minimum guest sizes, pure vegetarian and Jain menu prep, delivery across Noida & Delhi NCR, and packaging thermal standards." />
+  <link rel="canonical" href="https://thebhojancorporation.com/faq.html" />
+  
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700;800;900&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css" />
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          screens: { 'xs': '380px' },
+          fontFamily: { serif: ['Cinzel', 'serif'], sans: ['"Plus Jakarta Sans"', 'sans-serif'] },
+          colors: {
+            gold: { 50: '#fbf8f0', 100: '#f5edd9', 200: '#eddcb5', 300: '#dfc38a', 400: '#d0aa62', 500: '#c19545', 600: '#a77a33', 700: '#875d27', 800: '#6d4923', 900: '#53371d' },
+            charcoal: { 800: '#232220', 900: '#181715', 950: '#0f0e0c' }
+          }
+        }
+      }
+    }
+  </script>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "What is the minimum guest size?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Our bulk packed food services start at a minimum booking of 20 guests, with adjustments available in multiples of 5."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Is the food fresh or frozen?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "We prepare our food fresh in our commercial kitchen and dispatch it on the same day. We do not serve frozen food."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Is all food 100% Pure Vegetarian? Can we request Jain / No-Onion-Garlic?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes, every single preparation is 100% pure vegetarian (Shuddh Shakahari). We offer dedicated Jain Special Packages as well as customized Satvik (no onion, no garlic) menus upon request."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How is the food packed and kept hot during delivery?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "All orders are packed in heavy-duty, food-grade spill-proof containers and transported in insulated thermal boxes to guarantee food arrives piping hot and fresh at your venue."
+        }
+      }
+    ]
+  }
+  </script>
+</head>
+<body class="bg-[#f8f7f4] text-charcoal-900 min-h-screen flex flex-col font-sans antialiased selection:bg-gold-200">
+  
+  <header class="bg-white/95 backdrop-blur-md shadow-xs sticky top-0 z-40 border-b border-gold-200/60">
+    <div class="max-w-7xl mx-auto px-2 sm:px-6 lg:px-8">
+      <div class="flex items-center justify-between h-16 sm:h-20 gap-1.5 sm:gap-4">
+        <a href="index.html" class="flex items-center gap-1.5 xs:gap-2.5 sm:gap-3.5 group select-none min-w-0">
+          <img src="Logo TBC.png" alt="Logo" class="w-8 h-8 sm:w-12 sm:h-12 object-contain" />
+          <div class="flex flex-col justify-center">
+            <span class="text-[11px] xs:text-xs sm:text-lg lg:text-xl font-extrabold font-serif uppercase tracking-wider text-charcoal-950">The Bhojan Corporation</span>
+            <span class="text-[6.5px] xs:text-[7.5px] sm:text-[9px] font-bold text-gold-700 tracking-wider uppercase font-sans">Premium Packed and Bulk Foods</span>
+          </div>
+        </a>
+        
+        <nav class="hidden md:flex items-center gap-1.5 bg-stone-50/80 p-1.5 rounded-full border border-gold-200/60 shadow-inner">
+          <a href="index.html" class="nav-btn nav-btn-inactive">Home</a>
+          <a href="packages.html" class="nav-btn nav-btn-inactive">Packages</a>
+          <a href="gallery.html" class="nav-btn nav-btn-inactive">Gallery</a>
+          <a href="faq.html" class="nav-btn nav-btn-active">FAQ</a>
+          <a href="about.html" class="nav-btn nav-btn-inactive">About</a>
+          <a href="contact.html" class="nav-btn nav-btn-inactive">Contact Us</a>
+        </nav>
+
+        <button onclick="toggleMobileMenu()" aria-label="Toggle Menu" class="md:hidden p-1.5 rounded-lg text-charcoal-900 border border-gold-200/50">
+          <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
+        </button>
+      </div>
+    </div>
+    
+    <div id="mobileMenu" class="hidden md:hidden border-t border-gold-100 bg-white px-4 py-3 space-y-1 text-xs uppercase tracking-wider font-semibold shadow-lg">
+      <a href="index.html" class="mobile-nav-btn text-stone-700">Home</a>
+      <a href="packages.html" class="mobile-nav-btn text-stone-700">Packages & Menu</a>
+      <a href="gallery.html" class="mobile-nav-btn text-stone-700">Gallery</a>
+      <a href="faq.html" class="mobile-nav-btn mobile-nav-btn-active">FAQ</a>
+      <a href="about.html" class="mobile-nav-btn text-stone-700">About</a>
+      <a href="contact.html" class="mobile-nav-btn text-stone-700">Contact Us</a>
+    </div>
+  </header>
+
+  <main class="animate-page-fade flex-1 max-w-4xl w-full mx-auto px-3.5 sm:px-6 lg:px-8 py-5 sm:py-8 space-y-5 sm:space-y-6">
+    <div class="border-b border-gold-200 pb-3">
+      <span class="text-[10px] font-bold text-gold-700 uppercase tracking-[0.2em]">Questions & Clarity</span>
+      <h1 class="text-xl sm:text-2xl font-bold font-serif text-charcoal-950 uppercase tracking-wide mt-0.5">Frequently Asked Questions</h1>
+      <p class="text-xs text-stone-500 mt-0.5">Everything you need to know about our pure vegetarian packages, live customizations, and event logistics.</p>
+    </div>
+    
+    <div class="space-y-3 pt-1">
+      <details class="bg-white rounded-xl sm:rounded-2xl border border-gold-200/80 p-4 sm:p-5 shadow-2xs group">
+        <summary class="font-serif font-bold text-xs sm:text-sm text-charcoal-900 cursor-pointer list-none flex justify-between items-center">
+          1. What is the minimum guest size?
+          <span class="text-gold-600 font-bold text-base transition group-open:rotate-45">+</span>
+        </summary>
+        <p class="text-xs text-stone-600 mt-2.5 pt-2.5 border-t border-gold-50 leading-relaxed">
+          Our bulk packed food services start at a minimum booking of <strong>20 guests</strong>, with adjustments available in multiples of 5 (e.g., 20, 25, 30, 50, 100+ guests).
+        </p>
+      </details>
+
+      <details class="bg-white rounded-xl sm:rounded-2xl border border-gold-200/80 p-4 sm:p-5 shadow-2xs group">
+        <summary class="font-serif font-bold text-xs sm:text-sm text-charcoal-900 cursor-pointer list-none flex justify-between items-center">
+          2. Is the food fresh or frozen?
+          <span class="text-gold-600 font-bold text-base transition group-open:rotate-45">+</span>
+        </summary>
+        <p class="text-xs text-stone-600 mt-2.5 pt-2.5 border-t border-gold-50 leading-relaxed">
+          We prepare our food fresh in our commercial kitchen and dispatch it on the same day. We do not serve frozen food.
+        </p>
+      </details>
+
+      <details class="bg-white rounded-xl sm:rounded-2xl border border-gold-200/80 p-4 sm:p-5 shadow-2xs group">
+        <summary class="font-serif font-bold text-xs sm:text-sm text-charcoal-900 cursor-pointer list-none flex justify-between items-center">
+          3. Is all food 100% Pure Vegetarian? Can we request Jain / No-Onion-Garlic?
+          <span class="text-gold-600 font-bold text-base transition group-open:rotate-45">+</span>
+        </summary>
+        <p class="text-xs text-stone-600 mt-2.5 pt-2.5 border-t border-gold-50 leading-relaxed">
+          Yes, every single preparation is 100% pure vegetarian (Shuddh Shakahari). We offer dedicated <strong>Jain Special Packages</strong> as well as customized Satvik (no onion, no garlic) menus upon request.
+        </p>
+      </details>
+
+      <details class="bg-white rounded-xl sm:rounded-2xl border border-gold-200/80 p-4 sm:p-5 shadow-2xs group">
+        <summary class="font-serif font-bold text-xs sm:text-sm text-charcoal-900 cursor-pointer list-none flex justify-between items-center">
+          4. How will the food be delivered to us?
+          <span class="text-gold-600 font-bold text-base transition group-open:rotate-45">+</span>
+        </summary>
+        <p class="text-xs text-stone-600 mt-2.5 pt-2.5 border-t border-gold-50 leading-relaxed">
+          Your order will be delivered by Cab or through a reliable delivery partner, depending on the order size and delivery location. We ensure the food is securely packed for transportation.
+        </p>
+      </details>
+
+      <details class="bg-white rounded-xl sm:rounded-2xl border border-gold-200/80 p-4 sm:p-5 shadow-2xs group">
+        <summary class="font-serif font-bold text-xs sm:text-sm text-charcoal-900 cursor-pointer list-none flex justify-between items-center">
+          5. How is the food packed and kept hot during delivery?
+          <span class="text-gold-600 font-bold text-base transition group-open:rotate-45">+</span>
+        </summary>
+        <p class="text-xs text-stone-600 mt-2.5 pt-2.5 border-t border-gold-50 leading-relaxed">
+          All orders are packed in heavy-duty, food-grade spill-proof containers and transported in insulated thermal boxes to guarantee food arrives piping hot and fresh at your venue.
+        </p>
+      </details>
+
+      <details class="bg-white rounded-xl sm:rounded-2xl border border-gold-200/80 p-4 sm:p-5 shadow-2xs group">
+        <summary class="font-serif font-bold text-xs sm:text-sm text-charcoal-900 cursor-pointer list-none flex justify-between items-center">
+          6. How far in advance should I place my catering order?
+          <span class="text-gold-600 font-bold text-base transition group-open:rotate-45">+</span>
+        </summary>
+        <p class="text-xs text-stone-600 mt-2.5 pt-2.5 border-t border-gold-50 leading-relaxed">
+          We recommend placing orders at least <strong>24 to 48 hours in advance</strong> to guarantee your preferred delivery time slot and allow our chefs to source farm-fresh ingredients. For urgent same-day event requirements, connect directly with our WhatsApp helpline.
+        </p>
+      </details>
+    </div>
+
+    <div class="pt-3 flex justify-center">
+      <a href="packages.html" class="btn-luxury-primary text-charcoal-950 font-extrabold uppercase tracking-wider text-xs px-8 py-3.5 rounded-xl border border-gold-300 text-center w-full sm:w-auto">
+        Select Packages & Build Your Quote
+      </a>
+    </div>
+  </main>
+
+  <footer class="bg-charcoal-950 text-stone-400 border-t border-gold-500/20 mt-auto py-6 sm:py-8 text-center text-xs space-y-2">
+    <p class="font-serif font-bold text-gold-300 tracking-[0.2em] uppercase">The Bhojan Corporation</p>
+    <p class="text-[10px] text-stone-500">&copy; 2026 The Bhojan Corporation. Pure Vegetarian Catering & Event Solutions. All rights reserved.</p>
+  </footer>
+  <script src="js/shared.js"></script>
+</body>
+</html>
